@@ -8,7 +8,10 @@ namespace Session02Exercise01
         {
             Console.WriteLine("Hello World!");
 
+            var integer = 0;
 
+            Console.WriteLine("Integer is " + integer.ToString());
         }
+    }
     }
 }
