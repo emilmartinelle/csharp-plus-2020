@@ -16,10 +16,40 @@ namespace Session03Numbers
 
                 var inputArray = input.Split(",", StringSplitOptions.RemoveEmptyEntries);
 
+
                 foreach (var number in inputArray)
                 {
                     Console.WriteLine("Värdet är " + number);
                 }
+                using System;
+
+namespace Session03Numbers
+{
+    using System;
+
+    namespace Session03Exercise02
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                Console.WriteLine("Ange ett antal siffror, separat med kommatecken");
+
+                var input = Console.ReadLine();
+
+                var inputArray = input.Split(",", StringSplitOptions.RemoveEmptyEntries);
+
+                foreach (var number in inputArray)
+                {
+                    Console.WriteLine("Värdet är " + number);
+                }
+                        int lowestValue = (inputArray + 5);
+
+                        Console.WriteLine("Lägsta värdet är: " + lowestValue);
+            }
+        }
+    }
+
             }
         }
     }
