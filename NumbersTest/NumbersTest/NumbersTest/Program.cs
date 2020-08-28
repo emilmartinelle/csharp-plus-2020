@@ -1,6 +1,7 @@
 ﻿namespace Session03Numbers
 {
     using System;
+    using System.Globalization;
 
     namespace Session03Exercise02
     {
@@ -17,6 +18,8 @@
 
                 for (int i = 0; i < inputArray.Length; i++)
                 {
+                    NumberStyles numberStyles=NumberStyles.Integer
+
                     try
                     {
                         numberArray[i] = Convert.ToDouble(inputArray[i]);
@@ -27,8 +30,8 @@
                         numberArray[i] = 0;
                     }
 
-                    finally  /*/Körs alltid ovasett vad som händer med koden
-                              * Måste vara i en loop /*/
+                    /*/    finally    Körs alltid ovasett vad som händer med koden
+                                     * Måste vara i en loop /*/
                     {
 
                     }
@@ -37,6 +40,23 @@
                     foreach (var number in numberArray)
                     {
                         Console.WriteLine("Värde: " + number.ToString());
+                    }
+                    static double GetDoubleValue(string input)
+                    {
+                        try
+                        {
+                            var result = int.Parse(input);
+
+                            return result;
+                        }
+                        catch (FormatException ex) when (ex.Message.Contains("Input string"))
+                        {
+                            return double.MinValue;
+                        }
+                        catch (Exception ex)
+                        {
+                            return 0;
+                        }
                     }
 
 
