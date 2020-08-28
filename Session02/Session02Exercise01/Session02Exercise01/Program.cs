@@ -11,7 +11,10 @@ namespace Session02Exercise01
             var integer = 0;
 
             Console.WriteLine("Integer is " + integer.ToString());
+            string stringValue = "MyStringValue";
+
+            Console.WriteLine("The value of stringValue is:" + stringValue);
+
         }
     }
-    }
-}
+ }
